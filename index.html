@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="meta.title">MulitaMiner · Vulnerability Extraction from Security Reports using LLMs</title>
+  <meta name="description" data-i18n-attr="content" data-i18n="meta.description"
+    content="MulitaMiner is an automated, LLM-based tool that extracts and structures vulnerabilities from heterogeneous PDF reports produced by security scanners." />
+
+  <meta property="og:title" content="MulitaMiner" />
+  <meta property="og:description" content="Structured vulnerability extraction from security reports, powered by LLMs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/logo-dark.png" />
+  <meta name="theme-color" content="#e0561d" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="nav.skip">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="MulitaMiner">
+        <img class="brand-logo brand-logo--light" src="assets/img/logo-dark.png" alt="MulitaMiner" />
+        <img class="brand-logo brand-logo--dark" src="assets/img/logo-light.png" alt="MulitaMiner" />
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#how" data-i18n="nav.how">How it works</a>
+        <a href="#features" data-i18n="nav.features">Features</a>
+        <a href="#results" data-i18n="nav.results">Results</a>
+        <a href="#start" data-i18n="nav.start">Quick start</a>
+        <a href="#paper" data-i18n="nav.paper">Paper</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="pt">PT</button>
+          <button type="button" class="lang-btn" data-lang="es">ES</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <a class="btn btn-ghost btn-sm" href="https://github.com/AnonShield/MulitaMiner" target="_blank" rel="noopener" data-i18n="nav.github">GitHub</a>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-shell" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow eyebrow--accent" data-i18n="hero.badge">Automated · Structured · Multi-LLM</p>
+        <h1 class="hero-title" data-i18n="hero.title">Structured vulnerability extraction from security reports, powered by LLMs</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">MulitaMiner turns unstructured PDF reports from security scanners into consistent, analysis-ready vulnerability records.</p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://github.com/AnonShield/MulitaMiner" target="_blank" rel="noopener" data-i18n="hero.ctaGithub">View on GitHub</a>
+          <a class="btn btn-outline" href="https://sol.sbc.org.br/index.php/errc/article/view/39195" target="_blank" rel="noopener" data-i18n="hero.ctaPaper">Read the paper</a>
+          <a class="btn btn-link" href="https://github.com/AnonShield/MulitaMiner/tree/main/dataset" target="_blank" rel="noopener" data-i18n="hero.ctaDataset">Explore the dataset</a>
+        </div>
+
+        <dl class="hero-stats">
+          <div class="stat">
+            <dt class="stat-value">6,700</dt>
+            <dd class="stat-label" data-i18n="hero.stat1Label">vulnerabilities extracted</dd>
+          </div>
+          <div class="stat">
+            <dt class="stat-value">129</dt>
+            <dd class="stat-label" data-i18n="hero.stat2Label">OpenVAS reports</dd>
+          </div>
+          <div class="stat">
+            <dt class="stat-value">0.9355</dt>
+            <dd class="stat-label" data-i18n="hero.stat3Label">F1-score</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="eyebrow" data-i18n="about.eyebrow">What it is</p>
+        <h2 class="section-title" data-i18n="about.title">From messy PDF reports to clean vulnerability records</h2>
+        <div class="prose">
+          <p data-i18n="about.p1">Security scanners such as OpenVAS and Tenable WAS produce long, heterogeneous PDF reports.</p>
+          <p data-i18n="about.p2">MulitaMiner automates this with an LLM-based pipeline.</p>
+        </div>
+
+        <h3 class="subhead" data-i18n="about.useTitle">Use cases</h3>
+        <div class="grid grid-3">
+          <article class="card">
+            <h4 class="card-title" data-i18n="about.use1Title">Security analysis</h4>
+            <p class="card-body" data-i18n="about.use1Body">Automated extraction of vulnerabilities from scanner reports.</p>
+          </article>
+          <article class="card">
+            <h4 class="card-title" data-i18n="about.use2Title">Enterprise integration</h4>
+            <p class="card-body" data-i18n="about.use2Body">Support for CAIS formats used in corporate systems.</p>
+          </article>
+          <article class="card">
+            <h4 class="card-title" data-i18n="about.use3Title">Research and development</h4>
+            <p class="card-body" data-i18n="about.use3Body">Comparative evaluation of different LLMs on the same task.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section section--alt" id="how">
+      <div class="container">
+        <p class="eyebrow" data-i18n="how.eyebrow">How it works</p>
+        <h2 class="section-title" data-i18n="how.title">An adaptive, scanner-aware extraction pipeline</h2>
+        <p class="section-lead" data-i18n="how.subtitle">Six stages turn a raw PDF into standardized, multi-format output.</p>
+
+        <ol class="pipeline">
+          <li class="pipeline-step">
+            <span class="pipeline-num">1</span>
+            <h3 class="pipeline-title" data-i18n="how.s1Title">PDF input</h3>
+            <p class="pipeline-body" data-i18n="how.s1Body">Text and visual layout are extracted from the scanner report.</p>
+          </li>
+          <li class="pipeline-step">
+            <span class="pipeline-num">2</span>
+            <h3 class="pipeline-title" data-i18n="how.s2Title">Adaptive chunking</h3>
+            <p class="pipeline-body" data-i18n="how.s2Body">Chunk sizes are computed per LLM, guaranteeing zero token overflow.</p>
+          </li>
+          <li class="pipeline-step">
+            <span class="pipeline-num">3</span>
+            <h3 class="pipeline-title" data-i18n="how.s3Title">Scanner-aware prompting</h3>
+            <p class="pipeline-body" data-i18n="how.s3Body">Dedicated prompts per scanner guide the model.</p>
+          </li>
+          <li class="pipeline-step">
+            <span class="pipeline-num">4</span>
+            <h3 class="pipeline-title" data-i18n="how.s4Title">Multi-LLM extraction</h3>
+            <p class="pipeline-body" data-i18n="how.s4Body">Findings are extracted with the model of your choice.</p>
+          </li>
+          <li class="pipeline-step">
+            <span class="pipeline-num">5</span>
+            <h3 class="pipeline-title" data-i18n="how.s5Title">Consolidation</h3>
+            <p class="pipeline-body" data-i18n="how.s5Body">Duplicates are removed and instances merged into a single schema.</p>
+          </li>
+          <li class="pipeline-step">
+            <span class="pipeline-num">6</span>
+            <h3 class="pipeline-title" data-i18n="how.s6Title">Standardized output</h3>
+            <p class="pipeline-body" data-i18n="how.s6Body">Records are exported to JSON, JSONL, CSV and XLSX.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="container">
+        <p class="eyebrow" data-i18n="features.eyebrow">Capabilities</p>
+        <h2 class="section-title" data-i18n="features.title">Built for heterogeneous reports and many models</h2>
+        <div class="grid grid-3 features-grid">
+          <article class="card card--feature">
+            <div class="card-icon" aria-hidden="true">◇</div>
+            <h3 class="card-title" data-i18n="features.f1Title">Multi-LLM support</h3>
+            <p class="card-body" data-i18n="features.f1Body">OpenAI, DeepSeek and Groq via a simple JSON config.</p>
+          </article>
+          <article class="card card--feature">
+            <div class="card-icon" aria-hidden="true">◈</div>
+            <h3 class="card-title" data-i18n="features.f2Title">Scanner-aware</h3>
+            <p class="card-body" data-i18n="features.f2Body">Specialized strategies for OpenVAS, Tenable WAS and CAIS.</p>
+          </article>
+          <article class="card card--feature">
+            <div class="card-icon" aria-hidden="true">◆</div>
+            <h3 class="card-title" data-i18n="features.f3Title">Adaptive chunking</h3>
+            <p class="card-body" data-i18n="features.f3Body">A token-budget formula sizes each chunk per model.</p>
+          </article>
+          <article class="card card--feature">
+            <div class="card-icon" aria-hidden="true">◉</div>
+            <h3 class="card-title" data-i18n="features.f4Title">Quality validation</h3>
+            <p class="card-body" data-i18n="features.f4Body">Scored against baselines with BERTScore and ROUGE-L.</p>
+          </article>
+          <article class="card card--feature">
+            <div class="card-icon" aria-hidden="true">▤</div>
+            <h3 class="card-title" data-i18n="features.f5Title">Multi-format export</h3>
+            <p class="card-body" data-i18n="features.f5Body">JSON, JSONL, CSV and XLSX, layout preserved.</p>
+          </article>
+          <article class="card card--feature">
+            <div class="card-icon" aria-hidden="true">⟳</div>
+            <h3 class="card-title" data-i18n="features.f6Title">Reproducible experiments</h3>
+            <p class="card-body" data-i18n="features.f6Body">Batch runs with checkpoints and cost reports.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results / dataset -->
+    <section class="section section--dark" id="results">
+      <div class="container">
+        <p class="eyebrow eyebrow--accent" data-i18n="results.eyebrow">Evidence</p>
+        <h2 class="section-title" data-i18n="results.title">Validated dataset and metrics</h2>
+        <p class="section-lead" data-i18n="results.subtitle">Evaluated against ground-truth records and structured baselines.</p>
+
+        <div class="metrics">
+          <div class="metric">
+            <span class="metric-value">96.18%</span>
+            <span class="metric-label" data-i18n="results.metricRecall">Recall</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">91.06%</span>
+            <span class="metric-label" data-i18n="results.metricPrecision">Precision</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">0.9355</span>
+            <span class="metric-label" data-i18n="results.metricF1">F1-score</span>
+          </div>
+        </div>
+
+        <div class="grid grid-3 results-cards">
+          <article class="card card--dark card--wide">
+            <h3 class="card-title" data-i18n="results.datasetTitle">MulitaMiner dataset v1.0</h3>
+            <p class="card-body" data-i18n="results.datasetBody">6,700 vulnerabilities from 129 OpenVAS reports.</p>
+            <p class="card-meta"><span data-i18n="results.datasetFormats">Available formats:</span> JSON · JSONL · CSV · XLSX</p>
+          </article>
+          <article class="card card--dark">
+            <h3 class="card-title" data-i18n="results.scannersTitle">Supported scanners</h3>
+            <p class="card-body" data-i18n="results.scannersBody">OpenVAS / Greenbone, Tenable WAS, CAIS variants.</p>
+          </article>
+          <article class="card card--dark">
+            <h3 class="card-title" data-i18n="results.llmsTitle">Supported LLMs</h3>
+            <p class="card-body" data-i18n="results.llmsBody">GPT-4, GPT-5, DeepSeek, Llama 3/4, Qwen 3.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick start -->
+    <section class="section" id="start">
+      <div class="container">
+        <p class="eyebrow" data-i18n="start.eyebrow">Quick start</p>
+        <h2 class="section-title" data-i18n="start.title">Run your first extraction</h2>
+        <p class="section-lead" data-i18n="start.subtitle">Three steps to extract vulnerabilities from a sample OpenVAS report.</p>
+
+        <div class="steps">
+          <div class="step">
+            <h3 class="step-title"><span class="step-num">1</span><span data-i18n="start.step1">Clone and install</span></h3>
+            <pre class="code"><code>git clone https://github.com/AnonShield/MulitaMiner.git
+cd MulitaMiner
+python3 -m venv .venv &amp;&amp; source .venv/bin/activate
+pip install -r requirements.txt</code></pre>
+          </div>
+          <div class="step">
+            <h3 class="step-title"><span class="step-num">2</span><span data-i18n="start.step2">Add your API keys to a .env file</span></h3>
+            <pre class="code"><code>API_KEY_DEEPSEEK = "your-deepseek-api-key"
+API_KEY_GPT4     = "your-openai-api-key"
+API_KEY_LLAMA3   = "your-groq-api-key"</code></pre>
+          </div>
+          <div class="step">
+            <h3 class="step-title"><span class="step-num">3</span><span data-i18n="start.step3">Run the extraction</span></h3>
+            <pre class="code"><code>python3 main.py \
+  --input test/openvas/OpenVAS_JuiceShop.pdf \
+  --llm deepseek --scanner openvas \
+  --allow-duplicates --output-file openvas_test</code></pre>
+          </div>
+        </div>
+
+        <p class="docs-note">
+          <span data-i18n="start.docsNote">Full installation, usage and configuration guides are in the repository.</span>
+          <a href="https://github.com/AnonShield/MulitaMiner/tree/main/docs" target="_blank" rel="noopener" data-i18n="start.docsLink">Read the full documentation</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Paper / cite -->
+    <section class="section section--alt" id="paper">
+      <div class="container">
+        <p class="eyebrow" data-i18n="paper.eyebrow">Publication</p>
+        <h2 class="section-title" data-i18n="paper.title">Cite the paper</h2>
+
+        <div class="paper-card">
+          <h3 class="paper-title" data-i18n="paper.paperTitle">Structured Extraction of Vulnerabilities in OpenVAS and Tenable WAS Reports Using LLMs</h3>
+          <p class="paper-authors" data-i18n="paper.authors">Beatriz Machado, Douglas Lautert, Cristhian Kapelinski, Diego Kreutz</p>
+          <p class="paper-venue" data-i18n="paper.venue">Escola Regional de Redes de Computadores (ERRC), SBC</p>
+
+          <h4 class="paper-subhead" data-i18n="paper.abstractTitle">Abstract</h4>
+          <p class="paper-abstract" data-i18n="paper.abstract">This work proposes an automated, LLM-based method to extract and structure vulnerabilities.</p>
+
+          <a class="btn btn-primary btn-sm" href="https://sol.sbc.org.br/index.php/errc/article/view/39195" target="_blank" rel="noopener" data-i18n="paper.readLink">Open in the SBC library</a>
+
+          <div class="bibtex">
+            <div class="bibtex-head">
+              <span data-i18n="paper.bibtexTitle">BibTeX</span>
+              <button type="button" class="copy-btn" data-copy-target="#bibtex-code"><span data-i18n="paper.copy">Copy</span></button>
+            </div>
+<pre class="code"><code id="bibtex-code">@inproceedings{mulitaminer2026,
+  title     = {Structured Extraction of Vulnerabilities in OpenVAS
+               and Tenable WAS Reports Using LLMs},
+  author    = {Machado, Beatriz and Lautert, Douglas and
+               Kapelinski, Cristhian and Kreutz, Diego},
+  booktitle = {Escola Regional de Redes de Computadores (ERRC)},
+  publisher = {Sociedade Brasileira de Computa\c{c}\~{a}o (SBC)},
+  year      = {2026},
+  url       = {https://sol.sbc.org.br/index.php/errc/article/view/39195}
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/img/logo-light.png" alt="MulitaMiner" />
+        <p class="footer-tagline" data-i18n="footer.tagline">Vulnerability extraction from security reports using LLMs.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4 data-i18n="footer.project">Project</h4>
+          <a href="https://github.com/AnonShield/MulitaMiner" target="_blank" rel="noopener">MulitaMiner</a>
+          <a href="https://github.com/AnonShield/Vulnerability_Extractor" target="_blank" rel="noopener" data-i18n="footer.linkExtractor">Vulnerability Extractor</a>
+          <a href="https://github.com/AnonShield/MulitaMiner/tree/main/dataset" target="_blank" rel="noopener" data-i18n="footer.linkDataset">Dataset</a>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.resources">Resources</h4>
+          <a href="https://github.com/AnonShield/MulitaMiner/tree/main/docs" target="_blank" rel="noopener" data-i18n="footer.linkDocs">Documentation</a>
+          <a href="https://sol.sbc.org.br/index.php/errc/article/view/39195" target="_blank" rel="noopener" data-i18n="nav.paper">Paper</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p data-i18n="footer.builtBy">Built by the authors at UNIPAMPA.</p>
+      <p data-i18n="footer.license">Released under the MIT License.</p>
+    </div>
+  </footer>
+
+  <script src="assets/data/translations.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
