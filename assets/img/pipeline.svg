@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-labelledby="title desc" font-family="'Space Grotesk', system-ui, sans-serif">
+  <title id="title">MulitaMiner extraction pipeline</title>
+  <desc id="desc">Heterogeneous PDF reports from OpenVAS and Tenable WAS are normalized by the MulitaMiner pipeline into a single, scanner-independent record schema exported as JSON, JSONL, CSV and XLSX.</desc>
+
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="0%" r="75%">
+      <stop offset="0%" stop-color="#f48150" stop-opacity="0.14"/>
+      <stop offset="60%" stop-color="#f48150" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2d2d2d"/>
+      <stop offset="100%" stop-color="#232323"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#2d2d2d" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#e0561d"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="720" fill="#faf8f5"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+
+  <!-- Header -->
+  <text x="64" y="62" fill="#b5430f" font-size="15" font-weight="600" letter-spacing="3">HOW IT WORKS</text>
+  <text x="64" y="100" fill="#2a2724" font-size="34" font-weight="700" letter-spacing="-0.5">An adaptive, scanner-aware extraction pipeline</text>
+
+  <!-- ===================== FLOW: INPUT -> CORE -> OUTPUT ===================== -->
+
+  <!-- INPUT -->
+  <g filter="url(#soft)">
+    <rect x="64" y="150" width="330" height="248" rx="16" fill="#ffffff" stroke="#e7e0d7"/>
+  </g>
+  <text x="84" y="182" fill="#6f675f" font-size="13" font-weight="600" letter-spacing="1.5">HETEROGENEOUS PDF REPORTS</text>
+
+  <!-- OpenVAS mini report -->
+  <rect x="84" y="198" width="290" height="92" rx="10" fill="#faf8f5" stroke="#e7e0d7"/>
+  <circle cx="100" cy="218" r="4" fill="#e0561d"/>
+  <text x="114" y="222" fill="#2a2724" font-size="13" font-weight="600">OpenVAS / Greenbone</text>
+  <text x="354" y="222" fill="#9e9389" font-size="11" font-weight="600" text-anchor="end">PDF</text>
+  <g font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#2a2724">
+    <rect x="96" y="234" width="34" height="17" rx="5" fill="#c0392b"/>
+    <text x="113" y="246" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">9.8</text>
+    <text x="138" y="246">SSL/TLS: Deprecated TLSv1.0</text>
+    <rect x="96" y="256" width="34" height="17" rx="5" fill="#e0561d"/>
+    <text x="113" y="268" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">7.5</text>
+    <text x="138" y="268">OpenSSH &lt; 8.8 User Enum.</text>
+  </g>
+
+  <!-- Tenable mini report -->
+  <rect x="84" y="298" width="290" height="84" rx="10" fill="#faf8f5" stroke="#e7e0d7"/>
+  <circle cx="100" cy="318" r="4" fill="#e0561d"/>
+  <text x="114" y="322" fill="#2a2724" font-size="13" font-weight="600">Tenable WAS</text>
+  <text x="354" y="322" fill="#9e9389" font-size="11" font-weight="600" text-anchor="end">PDF</text>
+  <g font-family="'Inter', system-ui, sans-serif" font-size="12" fill="#2a2724">
+    <rect x="96" y="334" width="44" height="17" rx="5" fill="#c0392b"/>
+    <text x="118" y="346" fill="#fff" font-size="9" font-weight="700" text-anchor="middle">CRIT</text>
+    <text x="148" y="346">Cross-Site Scripting</text>
+    <rect x="96" y="356" width="44" height="17" rx="5" fill="#e0561d"/>
+    <text x="118" y="368" fill="#fff" font-size="9" font-weight="700" text-anchor="middle">HIGH</text>
+    <text x="148" y="368">SQL Injection /login</text>
+  </g>
+
+  <!-- Arrow IN -> CORE -->
+  <line x1="402" y1="274" x2="466" y2="274" stroke="#e0561d" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- CORE -->
+  <g filter="url(#soft)">
+    <rect x="474" y="150" width="332" height="248" rx="16" fill="url(#core)"/>
+  </g>
+  <rect x="494" y="172" width="120" height="26" rx="13" fill="#e0561d"/>
+  <text x="554" y="190" fill="#fff" font-size="14" font-weight="700" text-anchor="middle">MulitaMiner</text>
+
+  <g font-size="14" font-weight="600">
+    <rect x="494" y="214" width="292" height="38" rx="9" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="510" y="238" fill="#f3efe9">Adaptive chunking</text>
+    <rect x="494" y="258" width="292" height="38" rx="9" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="510" y="282" fill="#f3efe9">Scanner-aware prompting</text>
+    <rect x="494" y="302" width="292" height="38" rx="9" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="510" y="326" fill="#f3efe9">Multi-LLM extraction</text>
+    <rect x="494" y="346" width="292" height="38" rx="9" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="510" y="370" fill="#f3efe9">Consolidation</text>
+  </g>
+
+  <!-- Arrow CORE -> OUT -->
+  <line x1="814" y1="274" x2="878" y2="274" stroke="#e0561d" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- OUTPUT -->
+  <g filter="url(#soft)">
+    <rect x="886" y="150" width="330" height="248" rx="16" fill="#ffffff" stroke="#e7e0d7"/>
+  </g>
+  <text x="906" y="182" fill="#6f675f" font-size="13" font-weight="600" letter-spacing="1.5">STANDARDIZED RECORDS</text>
+
+  <rect x="906" y="198" width="290" height="138" rx="10" fill="#2d2d2d"/>
+  <g font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="13">
+    <text x="924" y="224" fill="#9e9389">{</text>
+    <text x="940" y="246" fill="#f3efe9">"host": <tspan fill="#f48150">"192.168.1.10"</tspan>,</text>
+    <text x="940" y="266" fill="#f3efe9">"name": <tspan fill="#f48150">"SSL/TLS Deprecated"</tspan>,</text>
+    <text x="940" y="286" fill="#f3efe9">"severity": <tspan fill="#f48150">"High"</tspan>,</text>
+    <text x="940" y="306" fill="#f3efe9">"cvss": <tspan fill="#7fb3d5">9.8</tspan>,</text>
+    <text x="940" y="326" fill="#f3efe9">"scanner": <tspan fill="#f48150">"openvas"</tspan></text>
+    <text x="924" y="332" fill="#9e9389"> }</text>
+  </g>
+  <g font-size="12" font-weight="600" font-family="'Inter', system-ui, sans-serif">
+    <rect x="906" y="350" width="62" height="26" rx="6" fill="#faf8f5" stroke="#e7e0d7"/>
+    <text x="937" y="367" fill="#2a2724" text-anchor="middle">JSON</text>
+    <rect x="976" y="350" width="62" height="26" rx="6" fill="#faf8f5" stroke="#e7e0d7"/>
+    <text x="1007" y="367" fill="#2a2724" text-anchor="middle">JSONL</text>
+    <rect x="1046" y="350" width="62" height="26" rx="6" fill="#faf8f5" stroke="#e7e0d7"/>
+    <text x="1077" y="367" fill="#2a2724" text-anchor="middle">CSV</text>
+    <rect x="1116" y="350" width="80" height="26" rx="6" fill="#faf8f5" stroke="#e7e0d7"/>
+    <text x="1156" y="367" fill="#2a2724" text-anchor="middle">XLSX</text>
+  </g>
+
+  <!-- ===================== PIPELINE STRIP (6 steps) ===================== -->
+  <line x1="64" y1="452" x2="1216" y2="452" stroke="#e7e0d7"/>
+  <text x="64" y="492" fill="#6f675f" font-size="13" font-weight="600" letter-spacing="1.5">SIX STAGES FROM RAW PDF TO STRUCTURED OUTPUT</text>
+
+  <g>
+    <!-- step boxes: 6 across, width ~178, gap ~14, starting x=64 -->
+    <!-- 1 -->
+    <rect x="64" y="510" width="178" height="150" rx="14" fill="#ffffff" stroke="#e7e0d7" filter="url(#soft)"/>
+    <circle cx="92" cy="540" r="15" fill="#e0561d"/>
+    <text x="92" y="545" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">1</text>
+    <text x="84" y="580" fill="#2a2724" font-size="16" font-weight="600">PDF input</text>
+    <g font-family="'Inter', system-ui, sans-serif" font-size="12.5" fill="#6f675f">
+      <text x="84" y="606">Text and visual</text>
+      <text x="84" y="624">layout extracted</text>
+      <text x="84" y="642">from the report.</text>
+    </g>
+
+    <!-- 2 -->
+    <rect x="256" y="510" width="178" height="150" rx="14" fill="#ffffff" stroke="#e7e0d7" filter="url(#soft)"/>
+    <circle cx="284" cy="540" r="15" fill="#e0561d"/>
+    <text x="284" y="545" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">2</text>
+    <text x="276" y="580" fill="#2a2724" font-size="16" font-weight="600">Adaptive chunking</text>
+    <g font-family="'Inter', system-ui, sans-serif" font-size="12.5" fill="#6f675f">
+      <text x="276" y="606">Per-LLM chunk</text>
+      <text x="276" y="624">sizes, zero token</text>
+      <text x="276" y="642">overflow.</text>
+    </g>
+
+    <!-- 3 -->
+    <rect x="448" y="510" width="178" height="150" rx="14" fill="#ffffff" stroke="#e7e0d7" filter="url(#soft)"/>
+    <circle cx="476" cy="540" r="15" fill="#e0561d"/>
+    <text x="476" y="545" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">3</text>
+    <text x="468" y="580" fill="#2a2724" font-size="16" font-weight="600">Scanner-aware</text>
+    <g font-family="'Inter', system-ui, sans-serif" font-size="12.5" fill="#6f675f">
+      <text x="468" y="606">Dedicated prompts</text>
+      <text x="468" y="624">per scanner guide</text>
+      <text x="468" y="642">the model.</text>
+    </g>
+
+    <!-- 4 -->
+    <rect x="640" y="510" width="178" height="150" rx="14" fill="#ffffff" stroke="#e7e0d7" filter="url(#soft)"/>
+    <circle cx="668" cy="540" r="15" fill="#2d2d2d"/>
+    <text x="668" y="545" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">4</text>
+    <text x="660" y="580" fill="#2a2724" font-size="16" font-weight="600">Multi-LLM</text>
+    <g font-family="'Inter', system-ui, sans-serif" font-size="12.5" fill="#6f675f">
+      <text x="660" y="606">Findings extracted</text>
+      <text x="660" y="624">with the model of</text>
+      <text x="660" y="642">your choice.</text>
+    </g>
+
+    <!-- 5 -->
+    <rect x="832" y="510" width="178" height="150" rx="14" fill="#ffffff" stroke="#e7e0d7" filter="url(#soft)"/>
+    <circle cx="860" cy="540" r="15" fill="#2d2d2d"/>
+    <text x="860" y="545" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">5</text>
+    <text x="852" y="580" fill="#2a2724" font-size="16" font-weight="600">Consolidation</text>
+    <g font-family="'Inter', system-ui, sans-serif" font-size="12.5" fill="#6f675f">
+      <text x="852" y="606">Duplicates removed,</text>
+      <text x="852" y="624">instances merged</text>
+      <text x="852" y="642">into one schema.</text>
+    </g>
+
+    <!-- 6 -->
+    <rect x="1024" y="510" width="192" height="150" rx="14" fill="#ffffff" stroke="#e7e0d7" filter="url(#soft)"/>
+    <circle cx="1052" cy="540" r="15" fill="#2d2d2d"/>
+    <text x="1052" y="545" fill="#fff" font-size="15" font-weight="700" text-anchor="middle">6</text>
+    <text x="1044" y="580" fill="#2a2724" font-size="16" font-weight="600">Standardized output</text>
+    <g font-family="'Inter', system-ui, sans-serif" font-size="12.5" fill="#6f675f">
+      <text x="1044" y="606">Exported to JSON,</text>
+      <text x="1044" y="624">JSONL, CSV and</text>
+      <text x="1044" y="642">XLSX.</text>
+    </g>
+  </g>
+</svg>

@@ -70,6 +70,8 @@ window.TRANSLATIONS = {
     "how.ovSub": "Scan Report · Host 192.168.1.10",
     "how.twSub": "Web App Scanning · target.example.com",
     "how.flowCaption": "Heterogeneous PDF reports from OpenVAS and Tenable WAS are normalized by the MulitaMiner pipeline into a single, scanner-independent record schema.",
+    "how.diagramCaption": "Complete pipeline diagram.",
+    "how.diagramLink": "Open full size (SVG)",
 
     "features.eyebrow": "Capabilities",
     "features.title": "Built for heterogeneous reports and many models",
@@ -132,7 +134,8 @@ window.TRANSLATIONS = {
     "footer.linkDataset": "Dataset",
     "footer.linkDocs": "Documentation",
     "footer.builtBy": "Built by the authors at UNIPAMPA.",
-    "footer.license": "Released under the MIT License."
+    "footer.license": "Released under the MIT License.",
+    "footer.copyright": "© 2026 Beatriz Machado, Douglas Lautert, Cristhian Kapelinski, Diego Kreutz"
   },
 
   pt: {
@@ -201,6 +204,8 @@ window.TRANSLATIONS = {
     "how.ovSub": "Relatório de varredura · Host 192.168.1.10",
     "how.twSub": "Web App Scanning · target.example.com",
     "how.flowCaption": "Relatórios PDF heterogêneos do OpenVAS e do Tenable WAS são normalizados pelo pipeline do MulitaMiner em um único esquema de registros, independente de scanner.",
+    "how.diagramCaption": "Diagrama completo do pipeline.",
+    "how.diagramLink": "Abrir em tamanho real (SVG)",
 
     "features.eyebrow": "Capacidades",
     "features.title": "Feito para relatórios heterogêneos e muitos modelos",
@@ -263,7 +268,8 @@ window.TRANSLATIONS = {
     "footer.linkDataset": "Dataset",
     "footer.linkDocs": "Documentação",
     "footer.builtBy": "Desenvolvido pelos autores na UNIPAMPA.",
-    "footer.license": "Distribuído sob a Licença MIT."
+    "footer.license": "Distribuído sob a Licença MIT.",
+    "footer.copyright": "© 2026 Beatriz Machado, Douglas Lautert, Cristhian Kapelinski, Diego Kreutz"
   },
 
   es: {
@@ -332,6 +338,8 @@ window.TRANSLATIONS = {
     "how.ovSub": "Informe de escaneo · Host 192.168.1.10",
     "how.twSub": "Web App Scanning · target.example.com",
     "how.flowCaption": "Los informes PDF heterogéneos de OpenVAS y Tenable WAS son normalizados por el pipeline de MulitaMiner en un único esquema de registros, independiente del escáner.",
+    "how.diagramCaption": "Diagrama completo del pipeline.",
+    "how.diagramLink": "Abrir en tamaño real (SVG)",
 
     "features.eyebrow": "Capacidades",
     "features.title": "Hecho para informes heterogéneos y muchos modelos",
@@ -394,6 +402,7 @@ window.TRANSLATIONS = {
     "footer.linkDataset": "Dataset",
     "footer.linkDocs": "Documentación",
     "footer.builtBy": "Desarrollado por los autores en UNIPAMPA.",
-    "footer.license": "Distribuido bajo la Licencia MIT."
+    "footer.license": "Distribuido bajo la Licencia MIT.",
+    "footer.copyright": "© 2026 Beatriz Machado, Douglas Lautert, Cristhian Kapelinski, Diego Kreutz"
   }
 };

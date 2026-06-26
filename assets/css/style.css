@@ -207,6 +207,19 @@ a:hover { text-decoration: underline; }
 .pipeline-title { font-family: var(--font-head); font-weight: 600; font-size: 1.08rem; margin: 0 0 6px; color: var(--charcoal); }
 .pipeline-body { margin: 0; color: var(--muted); font-size: .96rem; }
 
+/* ---------- Pipeline diagram figure ---------- */
+.pipeline-figure { margin: 52px 0 0; }
+.pipeline-figure a { display: block; }
+.pipeline-figure img {
+  display: block; width: 100%; height: auto;
+  border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.pipeline-figure figcaption {
+  margin-top: 14px; text-align: center; font-size: .92rem; color: var(--muted);
+}
+.pipeline-figure figcaption a { color: var(--accent-ink); margin-left: 6px; }
+.pipeline-figure figcaption a:hover { text-decoration: underline; }
+
 /* ---------- Pipeline visual (flow diagram) ---------- */
 .flow { margin: 0 0 48px; }
 .flow-grid {
@@ -401,6 +414,9 @@ a:hover { text-decoration: underline; }
   margin-top: 44px; padding-top: 22px; border-top: 1px solid #3c3c3c; color: #8f887f; font-size: .88rem;
 }
 .footer-bottom p { margin: 0; }
+.footer-copyright { flex-basis: 100%; margin-top: 6px; }
+.footer-copyright a { color: var(--accent); }
+.footer-copyright a:hover { text-decoration: underline; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
