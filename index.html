@@ -57,6 +57,10 @@
       <div class="hero-shell" aria-hidden="true"></div>
       <div class="container hero-inner">
         <p class="eyebrow eyebrow--accent" data-i18n="hero.badge">Automated · Structured · Multi-LLM</p>
+        <a class="award-badge" href="https://crrc-rs.github.io/errc2025/premiacoes/" target="_blank" rel="noopener">
+          <span class="award-badge-ico" aria-hidden="true">&#127942;</span>
+          <span data-i18n="award.badge">Honorable Mention &middot; WRSeg 2025</span>
+        </a>
         <h1 class="hero-title" data-i18n="hero.title">Structured vulnerability extraction from security reports, powered by LLMs</h1>
         <p class="hero-subtitle" data-i18n="hero.subtitle">MulitaMiner turns unstructured PDF reports from security scanners into consistent, analysis-ready vulnerability records.</p>
 
@@ -117,6 +121,78 @@
         <p class="eyebrow" data-i18n="how.eyebrow">How it works</p>
         <h2 class="section-title" data-i18n="how.title">An adaptive, scanner-aware extraction pipeline</h2>
         <p class="section-lead" data-i18n="how.subtitle">Six stages turn a raw PDF into standardized, multi-format output.</p>
+
+        <!-- Pipeline visual: heterogeneous PDF reports -> MulitaMiner -> standardized records -->
+        <figure class="flow" aria-labelledby="flow-cap">
+          <div class="flow-grid">
+
+            <!-- INPUT: scanner report snippets -->
+            <div class="flow-stage flow-stage--in">
+              <span class="flow-tag" data-i18n="how.flowIn">Heterogeneous PDF reports</span>
+
+              <article class="report report--openvas" aria-label="OpenVAS / Greenbone report snippet">
+                <header class="report-head">
+                  <span class="report-dot" aria-hidden="true"></span>
+                  <span class="report-brand">OpenVAS / Greenbone</span>
+                  <span class="report-kind">PDF</span>
+                </header>
+                <p class="report-sub" data-i18n="how.ovSub">Scan Report · Host 192.168.1.10</p>
+                <ul class="report-rows">
+                  <li><span class="sev sev--crit">9.8</span> SSL/TLS: Deprecated TLSv1.0</li>
+                  <li><span class="sev sev--high">7.5</span> OpenSSH &lt; 8.8 User Enum.</li>
+                  <li><span class="sev sev--med">5.3</span> TCP Timestamps Disclosure</li>
+                </ul>
+              </article>
+
+              <article class="report report--tenable" aria-label="Tenable WAS report snippet">
+                <header class="report-head">
+                  <span class="report-dot" aria-hidden="true"></span>
+                  <span class="report-brand">Tenable WAS</span>
+                  <span class="report-kind">PDF</span>
+                </header>
+                <p class="report-sub" data-i18n="how.twSub">Web App Scanning · target.example.com</p>
+                <ul class="report-rows">
+                  <li><span class="sev sev--crit">CRIT</span> Cross-Site Scripting <em>/search?q=</em></li>
+                  <li><span class="sev sev--high">HIGH</span> SQL Injection <em>/login</em></li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true"><span>&rarr;</span></div>
+
+            <!-- PROCESS: MulitaMiner core -->
+            <div class="flow-stage flow-stage--core">
+              <span class="flow-tag flow-tag--accent">MulitaMiner</span>
+              <ol class="flow-chips">
+                <li data-i18n="how.s2Title">Adaptive chunking</li>
+                <li data-i18n="how.s3Title">Scanner-aware prompting</li>
+                <li data-i18n="how.s4Title">Multi-LLM extraction</li>
+                <li data-i18n="how.s5Title">Consolidation</li>
+              </ol>
+            </div>
+
+            <div class="flow-arrow" aria-hidden="true"><span>&rarr;</span></div>
+
+            <!-- OUTPUT: standardized record -->
+            <div class="flow-stage flow-stage--out">
+              <span class="flow-tag" data-i18n="how.flowOut">Standardized records</span>
+              <pre class="record"><code>{
+  "host": "192.168.1.10",
+  "name": "SSL/TLS Deprecated",
+  "severity": "High",
+  "cvss": 9.8,
+  "scanner": "openvas"
+}</code></pre>
+              <ul class="formats">
+                <li>JSON</li><li>JSONL</li><li>CSV</li><li>XLSX</li>
+              </ul>
+            </div>
+
+          </div>
+          <figcaption id="flow-cap" class="flow-cap" data-i18n="how.flowCaption">
+            Heterogeneous PDF reports from OpenVAS and Tenable WAS are normalized by the MulitaMiner pipeline into a single, scanner-independent record schema.
+          </figcaption>
+        </figure>
 
         <ol class="pipeline">
           <li class="pipeline-step">
@@ -275,6 +351,22 @@ API_KEY_LLAMA3   = "your-groq-api-key"</code></pre>
       <div class="container">
         <p class="eyebrow" data-i18n="paper.eyebrow">Publication</p>
         <h2 class="section-title" data-i18n="paper.title">Cite the paper</h2>
+
+        <!-- Award: Best Paper (2nd place), WRSeg 2025 -->
+        <div class="award-banner">
+          <div class="award-banner-text">
+            <span class="award-banner-tag" aria-hidden="true">&#127942;</span>
+            <p class="award-banner-title" data-i18n="award.bannerTitle">Best Paper award (2nd place), WRSeg 2025</p>
+            <p class="award-banner-body" data-i18n="award.bannerBody">Recognized at the 9th Workshop Regional de Seguranca da Informacao e de Sistemas Computacionais (WRSeg), ERRC 2025.</p>
+            <div class="award-banner-links">
+              <a class="btn btn-primary btn-sm" href="assets/docs/wrseg2025_certificado.pdf" target="_blank" rel="noopener" data-i18n="award.viewCert">View certificate</a>
+              <a class="btn btn-outline btn-sm" href="https://crrc-rs.github.io/errc2025/premiacoes/" target="_blank" rel="noopener" data-i18n="award.viewList">See all awards</a>
+            </div>
+          </div>
+          <a class="award-cert" href="assets/docs/wrseg2025_certificado.pdf" target="_blank" rel="noopener" aria-label="Open WRSeg 2025 award certificate (PDF)">
+            <img src="assets/img/wrseg2025_certificado.png" alt="WRSeg 2025 award certificate: Melhor Artigo, 2nd place, for the MulitaMiner paper" loading="lazy" />
+          </a>
+        </div>
 
         <div class="paper-card">
           <h3 class="paper-title" data-i18n="paper.paperTitle">Structured Extraction of Vulnerabilities in OpenVAS and Tenable WAS Reports Using LLMs</h3>

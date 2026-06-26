@@ -30,6 +30,12 @@ window.TRANSLATIONS = {
     "hero.stat2Label": "OpenVAS reports",
     "hero.stat3Label": "F1-score",
 
+    "award.badge": "Best Paper · 2nd place · WRSeg 2025",
+    "award.bannerTitle": "Best Paper award (2nd place), WRSeg 2025",
+    "award.bannerBody": "Recognized at the 9th Workshop Regional de Segurança da Informação e de Sistemas Computacionais (WRSeg), ERRC 2025.",
+    "award.viewCert": "View certificate",
+    "award.viewList": "See all awards",
+
     "about.eyebrow": "What it is",
     "about.title": "From messy PDF reports to clean vulnerability records",
     "about.p1":
@@ -59,6 +65,11 @@ window.TRANSLATIONS = {
     "how.s5Body": "Duplicates are removed and instances merged into a single schema.",
     "how.s6Title": "Standardized output",
     "how.s6Body": "Records are exported to JSON, JSONL, CSV and XLSX.",
+    "how.flowIn": "Heterogeneous PDF reports",
+    "how.flowOut": "Standardized records",
+    "how.ovSub": "Scan Report · Host 192.168.1.10",
+    "how.twSub": "Web App Scanning · target.example.com",
+    "how.flowCaption": "Heterogeneous PDF reports from OpenVAS and Tenable WAS are normalized by the MulitaMiner pipeline into a single, scanner-independent record schema.",
 
     "features.eyebrow": "Capabilities",
     "features.title": "Built for heterogeneous reports and many models",
@@ -150,6 +161,12 @@ window.TRANSLATIONS = {
     "hero.stat2Label": "relatórios OpenVAS",
     "hero.stat3Label": "F1-score",
 
+    "award.badge": "Melhor Artigo · 2º colocado · WRSeg 2025",
+    "award.bannerTitle": "Prêmio de Melhor Artigo (2º colocado), WRSeg 2025",
+    "award.bannerBody": "Reconhecido no 9º Workshop Regional de Segurança da Informação e de Sistemas Computacionais (WRSeg), ERRC 2025.",
+    "award.viewCert": "Ver certificado",
+    "award.viewList": "Ver todas as premiações",
+
     "about.eyebrow": "O que é",
     "about.title": "De relatórios PDF confusos a registros de vulnerabilidades limpos",
     "about.p1":
@@ -179,6 +196,11 @@ window.TRANSLATIONS = {
     "how.s5Body": "Duplicatas são removidas e instâncias são mescladas em um único esquema.",
     "how.s6Title": "Saída padronizada",
     "how.s6Body": "Os registros são exportados em JSON, JSONL, CSV e XLSX.",
+    "how.flowIn": "Relatórios PDF heterogêneos",
+    "how.flowOut": "Registros padronizados",
+    "how.ovSub": "Relatório de varredura · Host 192.168.1.10",
+    "how.twSub": "Web App Scanning · target.example.com",
+    "how.flowCaption": "Relatórios PDF heterogêneos do OpenVAS e do Tenable WAS são normalizados pelo pipeline do MulitaMiner em um único esquema de registros, independente de scanner.",
 
     "features.eyebrow": "Capacidades",
     "features.title": "Feito para relatórios heterogêneos e muitos modelos",
@@ -270,6 +292,12 @@ window.TRANSLATIONS = {
     "hero.stat2Label": "informes OpenVAS",
     "hero.stat3Label": "F1-score",
 
+    "award.badge": "Mejor Artículo · 2º puesto · WRSeg 2025",
+    "award.bannerTitle": "Premio al Mejor Artículo (2º puesto), WRSeg 2025",
+    "award.bannerBody": "Reconocido en el 9º Workshop Regional de Segurança da Informação e de Sistemas Computacionais (WRSeg), ERRC 2025.",
+    "award.viewCert": "Ver certificado",
+    "award.viewList": "Ver todos los premios",
+
     "about.eyebrow": "Qué es",
     "about.title": "De informes PDF confusos a registros de vulnerabilidades limpios",
     "about.p1":
@@ -299,6 +327,11 @@ window.TRANSLATIONS = {
     "how.s5Body": "Se eliminan los duplicados y se fusionan las instancias en un único esquema.",
     "how.s6Title": "Salida estandarizada",
     "how.s6Body": "Los registros se exportan a JSON, JSONL, CSV y XLSX.",
+    "how.flowIn": "Informes PDF heterogéneos",
+    "how.flowOut": "Registros estandarizados",
+    "how.ovSub": "Informe de escaneo · Host 192.168.1.10",
+    "how.twSub": "Web App Scanning · target.example.com",
+    "how.flowCaption": "Los informes PDF heterogéneos de OpenVAS y Tenable WAS son normalizados por el pipeline de MulitaMiner en un único esquema de registros, independiente del escáner.",
 
     "features.eyebrow": "Capacidades",
     "features.title": "Hecho para informes heterogéneos y muchos modelos",
